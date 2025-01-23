@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .button-container {
+    text-align: center;
+    margin-left: auto;
+  }
+  
+  .futuristic-button {
+    background: linear-gradient(45deg, #024954, #5d850c, #d9ff00);
+    border: 2px solid transparent;
+    border-radius: 50px;
+    color: white;
+    font-size: 9px; /* Размер шрифта уменьшен в два раза */
+    font-weight: bold;
+    padding: 7px 15px; /* Паддинг уменьшен в два раза */
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.3s ease;
+  }
+  
+  .futuristic-button::before,
+  .futuristic-button::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+  }
+  
+  .futuristic-button:hover::before {
+    opacity: 1;
+    width: 150%;
+    height: 150%;
+  }
+  
+  .futuristic-button:hover {
+    background: linear-gradient(45deg, #e30acd, #f0724f, #7221d4);
+    box-shadow: 0 0 20px 4px rgba(255, 255, 255, 0.5);
+    transform: scale(1.05);
+  }
+  .letters{
+    width: 7%;
+    
+  }
+  
+  .title-container{
+    display: flex;
+    align-items: end;
+    justify-content: center;
+
+  }
+  .todo-input{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+  }
+  
+  .long-input{
+    width: 620px; 
+    padding: 5px; /* Внутренние отступы для удобства */
+    border: 1px solid #125a02; /* Граница поля */
+    border-radius: 5px; /* Скругленные углы (необязательно) */
+    font-size: 12px; /* Размер текста */
+    margin-right: 30px;
+  }
+
+  .add-button-container{
+    
+    display: flex;
+    justify-content: center;
+  }
+  .todo-item {
+    display: flex; /* Включаем Flexbox */
+    align-items: center; /* Выравнивание по вертикали */
+    gap: 50px; /* Расстояние между элементами */
+    padding: 10px;
+    border-bottom: 1px solid #ccc; 
+  }
+  .todo-list{
+    width: 720px;
+    margin-left: 350px;
+  }
